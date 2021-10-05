@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Network Corruption Model</title>
+    <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+          <h1>Network Corruption Model - Interactive</h1>
+          <form class="form form-horizontal" role="form">
+            <div class="form-group">
+              <div class="col-md-3">
+                <label class="form-label" for="recidivism_rate">Recidivism rate</label>
+                <input type="number" name="recidivism_rate" min=0 max=1 step=0.001 value=0.142 id="recidivism_rate" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-3">
+                <label class="form-label" for="beta_parameter">Beta parameter</label>
+                <input type="number" name="beta_parameter" min=-100 max=0 step=-1 value=-11 id="beta_parameter" class="form-control" />
+              </div>
+            </div>
+          </form>
+        <button id="startNewNetwork" onclick="startNewNetwork();addCompleteGraph();enableAddGraph();" class="btn btn-primary">Start new network</button>
+
+        <button id="add_new_scandal" class="btn btn-primary" onclick="addCompleteGraph();" disabled>Add new scandal</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mynetwork"></div>
+
+    <script type="text/javascript" src="./resources/js/network_model.js"></script>
+
+  </body>
+
+</html>

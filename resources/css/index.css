@@ -1,0 +1,18 @@
+body {
+  color: #d3d3d3;
+  font: 12pt arial;
+  background-color: #222222;
+}
+
+#add_new_scandal {
+  position: absolute;
+  left: 240px;
+}
+
+#mynetwork {
+  display: inline-block;
+  height: 600px;
+  width: 1200px;
+  border: 1px solid #444444;
+  background-color: #222222;
+}
